@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+
+    <!-- Prueba a eliminar o modificar el valor de sequence -->
+    <menuitem id="fp_management_menu" name="Gestión de FP" sequence="1"/>
+
+    <menuitem id="fp_ciclo_menu" name="Ciclos Formativos" parent="fp_management_menu"/>
+    <menuitem id="fp_estudiante_menu" name="Estudiantes" parent="fp_management_menu"/>
+
+    <record id="action_fp_ciclo" model="ir.actions.act_window">
+        <field name="name">Ciclos Formativos</field>
+        <field name="res_model">fp_management.ciclo</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_action_fp_ciclo" name="Administrar Ciclos" parent="fp_ciclo_menu" action="action_fp_ciclo"/>
+
+    <record id="action_fp_estudiante" model="ir.actions.act_window">
+        <field name="name">Estudiantes</field>
+        <field name="res_model">fp_management.estudiante</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_action_fp_estudiante" name="Administrar Estudiantes" parent="fp_estudiante_menu" action="action_fp_estudiante"/>
+  </data>
+</odoo>

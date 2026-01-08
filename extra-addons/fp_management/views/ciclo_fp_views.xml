@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+    <record id="view_fp_ciclo_form" model="ir.ui.view">
+        <field name="name">fp_management.ciclo.form</field>
+        <field name="model">fp_management.ciclo</field>
+        <field name="arch" type="xml">
+            <form string="Ciclo Formativo">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                    </group>
+                    <!-- Esto nos permite mostrar los estudiantes debajo en una pestaña-->
+                    <notebook>
+                        <page string="Estudiantes">
+                            <field name="estudiante_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="edad"/>
+                                    <field name="via_acceso"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_fp_ciclo_list" model="ir.ui.view">
+        <field name="name">fp_management.ciclo.list</field>
+        <field name="model">fp_management.ciclo</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="descripcion"/>
+            </list>
+        </field>
+    </record>
+  </data>
+</odoo>

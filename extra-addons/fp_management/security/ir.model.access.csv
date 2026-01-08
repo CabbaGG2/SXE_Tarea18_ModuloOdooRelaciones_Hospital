@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fp_management_ciclo,access.fp_management.ciclo,model_fp_management_ciclo,,1,1,1,1
+access_fp_management_estudiante,access.fp_management.estudiante,model_fp_management_estudiante,,1,1,1,1

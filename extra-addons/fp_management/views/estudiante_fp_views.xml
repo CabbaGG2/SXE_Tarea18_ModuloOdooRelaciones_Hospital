@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+
+    <record id="view_fp_estudiante_form" model="ir.ui.view">
+        <field name="name">fp_management.estudiante.form</field>
+        <field name="model">fp_management.estudiante</field>
+        <field name="arch" type="xml">
+            <form string="Estudiante de FP">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="edad"/>
+                        <field name="ciclo_id"/>
+                        <field name="via_acceso"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_fp_estudiante_list" model="ir.ui.view">
+        <field name="name">fp_management.estudiante.list</field>
+        <field name="model">fp_management.estudiante</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="edad"/>
+                <field name="ciclo_id"/>
+                <field name="via_acceso"/>
+            </list>
+        </field>
+    </record>
+
+  </data>
+</odoo>

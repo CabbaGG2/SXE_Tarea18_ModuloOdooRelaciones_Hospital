@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="ciclo_fp_informatica" model="fp_management.ciclo">
+          <field name="name">CS DAM</field>
+          <field name="descripcion">Ciclo Superior de Desarrollo de Aplicaciones Multiplataforma</field>
+        </record>
+
+        <record id="estudiante_1" model="fp_management.estudiante">
+          <field name="name">Mike Mancuerna</field>
+          <field name="edad">20</field>
+          <field name="ciclo_id" ref="ciclo_fp_informatica"/>
+          <field name="via_acceso">bachillerato</field>
+        </record>
+    </data>
+</odoo>
