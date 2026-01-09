@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <record id="view_hospital_medico_form" model="ir.ui.view">
+            <field name="name">hospital.medico.form</field>
+            <field name="model">modulo_hospital.medico</field>
+            <field name="arch" type="xml">
+                <form string = "Médicos">
+                    <sheet>
+                        <group>
+                            <field name = "id_medico"/>
+                            <field name = "nombre"/>
+                            <field name = "apellidos"/>
+                            <field name = "numero_colegiado"/>
+                            <field name = "consulta"/>
+                        </group>
+                        <notebook>
+                            <page string = "Pacientes atendidos">
+                                <field name = "paciente_ids" readonly="1">
+                                    <list>
+                                        <field name = "nombre"/>
+                                        <field name = "apellidos"/>
+                                        <field name = "sintomas"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hospital_medico_list" model="ir.ui.view">
+            <field name="name">hospital.medico.list</field>
+            <field name="model">modulo_hospital.medico</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="id_medico"/>
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="numero_colegiado"/>
+                    <field name="consulta"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <record id="view_hospital_diagnostico_form" model="ir.ui.view">
+            <field name="name">hospital.diagnostico.form</field>
+            <field name="model">modulo_hospital.diagnostico</field>
+            <field name="arch" type="xml">
+                <form string = "Diagnósticos">
+                    <sheet>
+                        <group>
+                            <field name = "medico_id"/>
+                            <field name = "paciente_id"/>
+                            <field name = "sintoma" readonly="1"/>
+                            <field name = "consulta" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hospital_diagnostico_list" model="ir.ui.view">
+            <field name="name">hospital.diagnostico.list</field>
+            <field name="model">modulo_hospital.diagnostico</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="medico_id"/>
+                    <field name="paciente_id"/>
+                    <field name="consulta"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

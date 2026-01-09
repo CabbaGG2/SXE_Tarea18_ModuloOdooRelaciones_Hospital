@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <menuitem id="hospital_management_menu" name="Gestión Hospitalaria" sequence="10"/>
+
+        <menuitem id="hospital_medico_menu_cat" name="Médicos" parent="hospital_management_menu" sequence="10"/>
+        <menuitem id="hospital_paciente_menu_cat" name="Pacientes" parent="hospital_management_menu" sequence="20"/>
+        <menuitem id="hospital_diagnostico_menu_cat" name="Diagnósticos" parent="hospital_management_menu" sequence="30"/>
+
+        <record id="action_hospital_medico" model="ir.actions.act_window">
+            <field name="name">Médicos</field>
+            <field name="res_model">modulo_hospital.medico</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_hospital_paciente" model="ir.actions.act_window">
+            <field name="name">Pacientes</field>
+            <field name="res_model">modulo_hospital.paciente</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <record id="action_hospital_diagnostico" model="ir.actions.act_window">
+            <field name="name">Diagnósticos</field>
+            <field name="res_model">modulo_hospital.diagnostico</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <menuitem id="menu_action_hospital_medico"
+                  name="Administrar Médicos"
+                  parent="hospital_medico_menu_cat"
+                  action="action_hospital_medico"
+                  sequence="10"/>
+
+        <menuitem id="menu_action_hospital_paciente"
+                  name="Administrar Pacientes"
+                  parent="hospital_paciente_menu_cat"
+                  action="action_hospital_paciente"
+                  sequence="10"/>
+
+        <menuitem id="menu_action_hospital_diagnostico"
+                  name="Ver Diagnósticos"
+                  parent="hospital_diagnostico_menu_cat"
+                  action="action_hospital_diagnostico"
+                  sequence="10"/>
+    </data>
+</odoo>

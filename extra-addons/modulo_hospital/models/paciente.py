@@ -8,10 +8,10 @@ class Paciente(models.Model):
     nombre = fields.Char(string = "Nombre", required = True)
     apellidos = fields.Char(string = "Apellidos", required = True)
     sintomas = fields.Text(string = "Síntomas")
-    diagnostico_id = fields.One2Many('modulo_hospital.diagnostico', 'diagnostico_id', string = "Diagnósticos")
-    medico_ids = fields.Many2Many('modulo_hospital.medico', compute='_compute_medicos', string="Médicos que atendieron al paciente")
+    diagnostico_ids = fields.One2many('modulo_hospital.diagnostico', 'paciente_id', string = "Diagnósticos")
+    medico_ids = fields.Many2many('modulo_hospital.medico', compute='_compute_medicos', string="Médicos que atendieron al paciente")
 
     def _compute_medicos(self):
         for paciente in self:
-            paciente.medico_ids = paciente.diagnostico_id.mapped('medico_id')
+            paciente.medico_ids = paciente.diagnostico_ids.mapped('medico_id')
 

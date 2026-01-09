@@ -23,10 +23,10 @@ Modulo que gestiona la interacción entre pacientes y médicos y el diagnóstico
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/paciente_view.xml',
-        'views/medicos_view.xml',
-        'views/diagnosticos_view.xml',
-        'views/menu_view.xml',
+        'views/paciente_hospital_views.xml',
+        'views/medico_hospital_views.xml',
+        'views/diagnostico_hospital_views.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
