@@ -615,6 +615,21 @@ El módulo incluye archivo `ir.model.access.csv` para controlar los permisos de 
 
 ---
 
+## Capturas de Pantalla
+
+![1.png](imagenes/1.png)
+
+![2.png](imagenes/2.png)
+
+![3.png](imagenes/3.png)
+
+![4.png](imagenes/4.png)
+
+![5.png](imagenes/5.png)
+
+![6.png](imagenes/6.png)
+---
+
 ## Autores
 
 - **Módulo Hospital**: CabbaGG Corp.
